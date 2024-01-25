@@ -1,0 +1,788 @@
+[0m[1mdata.external.get_my_public_ip: Reading...[0m[0m
+[0m[1mdata.external.get_my_public_ip: Read complete after 0s [id=-][0m
+[0m[1mdata.oci_objectstorage_namespace.gru_objectstorage_ns: Reading...[0m[0m
+[0m[1mdata.oci_identity_availability_domains.gru_ads: Reading...[0m[0m
+[0m[1mdata.oci_core_services.gru_all_oci_services: Reading...[0m[0m
+[0m[1mdata.oci_mysql_shapes.mysql_shape_vm_standard-E31: Reading...[0m[0m
+[0m[1mdata.oci_mysql_mysql_configurations.gru_mysqlconfig_standalone_vm_standard-E31: Reading...[0m[0m
+[0m[1moci_core_vcn.gru_vcn: Refreshing state... [id=ocid1.vcn.oc1.sa-saopaulo-1.amaaaaaatsbrckqaq6cip3jwm44p37sf3vrx3vtbg5pcqujyga43p2apgv2q][0m
+[0m[1mdata.oci_identity_availability_domains.gru_ads: Read complete after 1s [id=IdentityAvailabilityDomainsDataSource-3629531066][0m
+[0m[1mdata.oci_identity_fault_domains.gru_fds: Reading...[0m[0m
+[0m[1moci_core_internet_gateway.gru_igw: Refreshing state... [id=ocid1.internetgateway.oc1.sa-saopaulo-1.aaaaaaaahflcshtvqtylzdue5e3wrgu33gnqfnnzwsteisfswgcozy63735a][0m
+[0m[1moci_core_dhcp_options.gru_dhcp-options: Refreshing state... [id=ocid1.dhcpoptions.oc1.sa-saopaulo-1.aaaaaaaahwlgwg5zraedbq4mspptgql4ekjcvj6wwowniycmfl7qp2h4scha][0m
+[0m[1mdata.oci_core_services.gru_all_oci_services: Read complete after 1s [id=CoreServicesDataSource-0][0m
+[0m[1moci_core_security_list.gru_secl-1_subnpub_oke_lb: Refreshing state... [id=ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaaxmlw7hypj3xcrsx4mcacnk6fkhx3k6lejcklnkcshyj4ewvckpoq][0m
+[0m[1mdata.oci_objectstorage_namespace.gru_objectstorage_ns: Read complete after 1s [id=ObjectStorageNamespaceDataSource-3629531066][0m
+[0m[1mdata.oci_identity_fault_domains.gru_fds: Read complete after 0s [id=IdentityFaultDomainsDataSource-436502614][0m
+[0m[1moci_core_route_table.gru_rtb_subnpub: Refreshing state... [id=ocid1.routetable.oc1.sa-saopaulo-1.aaaaaaaaclvkkgrejbi7wu3ecvb24cb3xo2rtgbpjtzwkga3clhsun5cf6zq][0m
+[0m[1mdata.oci_mysql_mysql_configurations.gru_mysqlconfig_standalone_vm_standard-E31: Read complete after 1s [id=MysqlMysqlConfigurationsDataSource-3629531066][0m
+[0m[1moci_core_subnet.gru_subnpub_oke_lb: Refreshing state... [id=ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaofhv7k4hg324jfad3r7gxtsufy2jtrefpsell7tstltu5kztfunq][0m
+[0m[1mdata.oci_mysql_shapes.mysql_shape_vm_standard-E31: Read complete after 2s [id=MysqlShapesDataSource-3629531066][0m
+
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+[0m
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+[1m  # oci_core_dhcp_options.gru_dhcp-options[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_dhcp_options" "gru_dhcp-options" {
+      [31m-[0m[0m id               = "ocid1.dhcpoptions.oc1.sa-saopaulo-1.aaaaaaaahwlgwg5zraedbq4mspptgql4ekjcvj6wwowniycmfl7qp2h4scha" [90m-> null[0m[0m
+        [90m# (8 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+
+[1m  # oci_core_internet_gateway.gru_igw[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_internet_gateway" "gru_igw" {
+      [31m-[0m[0m id             = "ocid1.internetgateway.oc1.sa-saopaulo-1.aaaaaaaahflcshtvqtylzdue5e3wrgu33gnqfnnzwsteisfswgcozy63735a" [90m-> null[0m[0m
+        [90m# (8 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # oci_core_route_table.gru_rtb_subnpub[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_route_table" "gru_rtb_subnpub" {
+      [31m-[0m[0m id             = "ocid1.routetable.oc1.sa-saopaulo-1.aaaaaaaaclvkkgrejbi7wu3ecvb24cb3xo2rtgbpjtzwkga3clhsun5cf6zq" [90m-> null[0m[0m
+        [90m# (7 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+
+[1m  # oci_core_security_list.gru_secl-1_subnpub_oke_lb[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_security_list" "gru_secl-1_subnpub_oke_lb" {
+      [31m-[0m[0m id             = "ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaaxmlw7hypj3xcrsx4mcacnk6fkhx3k6lejcklnkcshyj4ewvckpoq" [90m-> null[0m[0m
+        [90m# (7 unchanged attributes hidden)[0m[0m
+
+        [90m# (7 unchanged blocks hidden)[0m[0m
+    }
+
+[1m  # oci_core_subnet.gru_subnpub_oke_lb[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_subnet" "gru_subnpub_oke_lb" {
+      [31m-[0m[0m id                         = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaofhv7k4hg324jfad3r7gxtsufy2jtrefpsell7tstltu5kztfunq" [90m-> null[0m[0m
+        [90m# (18 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # oci_core_vcn.gru_vcn[0m has been deleted
+[0m  [31m-[0m[0m resource "oci_core_vcn" "gru_vcn" {
+      [31m-[0m[0m id                       = "ocid1.vcn.oc1.sa-saopaulo-1.amaaaaaatsbrckqaq6cip3jwm44p37sf3vrx3vtbg5pcqujyga43p2apgv2q" [90m-> null[0m[0m
+        [90m# (17 unchanged attributes hidden)[0m[0m
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # null_resource.gru_oke-kubectl-cmds[0m will be created
+[0m  [32m+[0m[0m resource "null_resource" "gru_oke-kubectl-cmds" {
+      [32m+[0m[0m id = (known after apply)
+    }
+
+[1m  # oci_containerengine_cluster.gru_oke_motando[0m will be created
+[0m  [32m+[0m[0m resource "oci_containerengine_cluster" "gru_oke_motando" {
+      [32m+[0m[0m available_kubernetes_upgrades = (known after apply)
+      [32m+[0m[0m compartment_id                = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags                  = (known after apply)
+      [32m+[0m[0m endpoints                     = (known after apply)
+      [32m+[0m[0m freeform_tags                 = (known after apply)
+      [32m+[0m[0m id                            = (known after apply)
+      [32m+[0m[0m kms_key_id                    = (known after apply)
+      [32m+[0m[0m kubernetes_version            = "v1.26.2"
+      [32m+[0m[0m lifecycle_details             = (known after apply)
+      [32m+[0m[0m metadata                      = (known after apply)
+      [32m+[0m[0m name                          = "oke_terraform"
+      [32m+[0m[0m state                         = (known after apply)
+      [32m+[0m[0m type                          = "BASIC_CLUSTER"
+      [32m+[0m[0m vcn_id                        = (known after apply)
+
+      [32m+[0m[0m cluster_pod_network_options {
+          [32m+[0m[0m cni_type = "FLANNEL_OVERLAY"
+        }
+
+      [32m+[0m[0m endpoint_config {
+          [32m+[0m[0m is_public_ip_enabled = true
+          [32m+[0m[0m subnet_id            = (known after apply)
+        }
+
+      [32m+[0m[0m options {
+          [32m+[0m[0m service_lb_subnet_ids = (known after apply)
+
+          [32m+[0m[0m add_ons {
+              [32m+[0m[0m is_kubernetes_dashboard_enabled = false
+              [32m+[0m[0m is_tiller_enabled               = false
+            }
+
+          [32m+[0m[0m admission_controller_options {
+              [32m+[0m[0m is_pod_security_policy_enabled = false
+            }
+
+          [32m+[0m[0m kubernetes_network_config {
+              [32m+[0m[0m pods_cidr     = "10.244.0.0/16"
+              [32m+[0m[0m services_cidr = "10.96.0.0/16"
+            }
+        }
+    }
+
+[1m  # oci_containerengine_node_pool.gru_oke_motando_np-1[0m will be created
+[0m  [32m+[0m[0m resource "oci_containerengine_node_pool" "gru_oke_motando_np-1" {
+      [32m+[0m[0m cluster_id          = (known after apply)
+      [32m+[0m[0m compartment_id      = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags        = (known after apply)
+      [32m+[0m[0m freeform_tags       = (known after apply)
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m kubernetes_version  = "v1.26.2"
+      [32m+[0m[0m lifecycle_details   = (known after apply)
+      [32m+[0m[0m name                = "gru_oke_motando_np-1"
+      [32m+[0m[0m node_image_id       = (known after apply)
+      [32m+[0m[0m node_image_name     = (known after apply)
+      [32m+[0m[0m node_metadata       = (known after apply)
+      [32m+[0m[0m node_shape          = "VM.Standard.E3.Flex"
+      [32m+[0m[0m node_source         = (known after apply)
+      [32m+[0m[0m nodes               = (known after apply)
+      [32m+[0m[0m quantity_per_subnet = (known after apply)
+      [32m+[0m[0m ssh_public_key      = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC69T/zsP6tsRvekO18rCMYrEoitwe7T6fvCCuYm6m6XXsF0wx13LbTLdGhLido2sq1xf5KOpBOWqNLek/26LEpMW/RhLYiiUpzroO6iCWMiw66SQSqcgw/rXHd0Fuk7hYprgP4Y5cYvAjq3GV2gIPbQSpx0742ymaCIwRVsuVkQKuOZtSFNht5M2oVyZL6rDO39eMquGmV/piWsujTUqROqhy1Q7Yp0v1hdNNZxy8ydWtKovEaCMByd7VF+kC2CJPU13884vpDNN2yVv0VVymjDCz5jKgM9C8mQegWvsMvAg+qavQRyJO/7ngVH8IsawiM73lDsKB54aYUkCkP6W8h DANILO_DE_@3962d04cc3ad
+        EOT
+      [32m+[0m[0m state               = (known after apply)
+      [32m+[0m[0m subnet_ids          = (known after apply)
+
+      [32m+[0m[0m node_config_details {
+          [32m+[0m[0m defined_tags                        = (known after apply)
+          [32m+[0m[0m freeform_tags                       = (known after apply)
+          [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+          [32m+[0m[0m kms_key_id                          = (known after apply)
+          [32m+[0m[0m nsg_ids                             = (known after apply)
+          [32m+[0m[0m size                                = 3
+
+          [32m+[0m[0m node_pool_pod_network_option_details {
+              [32m+[0m[0m cni_type          = "FLANNEL_OVERLAY"
+              [32m+[0m[0m max_pods_per_node = (known after apply)
+              [32m+[0m[0m pod_nsg_ids       = (known after apply)
+              [32m+[0m[0m pod_subnet_ids    = (known after apply)
+            }
+
+          [32m+[0m[0m placement_configs {
+              [32m+[0m[0m availability_domain     = "zPSG:SA-SAOPAULO-1-AD-1"
+              [32m+[0m[0m capacity_reservation_id = (known after apply)
+              [32m+[0m[0m fault_domains           = (known after apply)
+              [32m+[0m[0m subnet_id               = (known after apply)
+            }
+        }
+
+      [32m+[0m[0m node_shape_config {
+          [32m+[0m[0m memory_in_gbs = 16
+          [32m+[0m[0m ocpus         = 2
+        }
+
+      [32m+[0m[0m node_source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = "150"
+          [32m+[0m[0m image_id                = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaam3a4uqutws6iwo3ojxmvzrshvchxm3rajn446ffnnhevttdbgmra"
+          [32m+[0m[0m source_type             = "IMAGE"
+        }
+    }
+
+[1m  # oci_core_dhcp_options.gru_dhcp-options[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_dhcp_options" "gru_dhcp-options" {
+      [32m+[0m[0m compartment_id   = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags     = (known after apply)
+      [32m+[0m[0m display_name     = "dhcp-options"
+      [32m+[0m[0m domain_name_type = (known after apply)
+      [32m+[0m[0m freeform_tags    = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m state            = (known after apply)
+      [32m+[0m[0m time_created     = (known after apply)
+      [32m+[0m[0m vcn_id           = (known after apply)
+
+      [32m+[0m[0m options {
+          [32m+[0m[0m custom_dns_servers  = []
+          [32m+[0m[0m search_domain_names = (known after apply)
+          [32m+[0m[0m server_type         = "VcnLocalPlusInternet"
+          [32m+[0m[0m type                = "DomainNameServer"
+        }
+    }
+
+[1m  # oci_core_internet_gateway.gru_igw[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_internet_gateway" "gru_igw" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "igw"
+      [32m+[0m[0m enabled        = true
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+    }
+
+[1m  # oci_core_nat_gateway.gru_ngw[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_nat_gateway" "gru_ngw" {
+      [32m+[0m[0m block_traffic  = false
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "ngw"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m nat_ip         = (known after apply)
+      [32m+[0m[0m public_ip_id   = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+    }
+
+[1m  # oci_core_route_table.gru_rtb_subnprv[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_route_table" "gru_rtb_subnprv" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "rtb_subnprv"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m route_rules {
+          [32m+[0m[0m cidr_block        = (known after apply)
+          [32m+[0m[0m description       = "NAT GATEWAY"
+          [32m+[0m[0m destination       = "0.0.0.0/0"
+          [32m+[0m[0m destination_type  = "CIDR_BLOCK"
+          [32m+[0m[0m network_entity_id = (known after apply)
+          [32m+[0m[0m route_type        = (known after apply)
+        }
+      [32m+[0m[0m route_rules {
+          [32m+[0m[0m cidr_block        = (known after apply)
+          [32m+[0m[0m description       = "SERVICE GATEWAY"
+          [32m+[0m[0m destination       = "all-gru-services-in-oracle-services-network"
+          [32m+[0m[0m destination_type  = "SERVICE_CIDR_BLOCK"
+          [32m+[0m[0m network_entity_id = (known after apply)
+          [32m+[0m[0m route_type        = (known after apply)
+        }
+    }
+
+[1m  # oci_core_route_table.gru_rtb_subnpub[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_route_table" "gru_rtb_subnpub" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "rtb_subnpub"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m route_rules {
+          [32m+[0m[0m cidr_block        = (known after apply)
+          [32m+[0m[0m description       = "INTERNET GATEWAY"
+          [32m+[0m[0m destination       = "0.0.0.0/0"
+          [32m+[0m[0m destination_type  = "CIDR_BLOCK"
+          [32m+[0m[0m network_entity_id = (known after apply)
+          [32m+[0m[0m route_type        = (known after apply)
+        }
+    }
+
+[1m  # oci_core_security_list.gru_secl-1_subnprv_oke_node_pool[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_security_list" "gru_secl-1_subnprv_oke_node_pool" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "secl-1_subnprv_oke_node_pool"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m egress_security_rules {
+          [32m+[0m[0m description      = (known after apply)
+          [32m+[0m[0m destination      = "0.0.0.0/0"
+          [32m+[0m[0m destination_type = "CIDR_BLOCK"
+          [32m+[0m[0m protocol         = "all"
+          [32m+[0m[0m stateless        = false
+        }
+
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "all"
+          [32m+[0m[0m source      = "0.0.0.0/0"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+        }
+    }
+
+[1m  # oci_core_security_list.gru_secl-1_subnpub_oke_kubeapi[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_security_list" "gru_secl-1_subnpub_oke_kubeapi" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "secl-1_subnpub_oke_kubeapi"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m egress_security_rules {
+          [32m+[0m[0m description      = (known after apply)
+          [32m+[0m[0m destination      = "0.0.0.0/0"
+          [32m+[0m[0m destination_type = "CIDR_BLOCK"
+          [32m+[0m[0m protocol         = "all"
+          [32m+[0m[0m stateless        = false
+        }
+
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "1"
+          [32m+[0m[0m source      = "0.0.0.0/0"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m icmp_options {
+              [32m+[0m[0m code = 4
+              [32m+[0m[0m type = 3
+            }
+        }
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "6"
+          [32m+[0m[0m source      = "129.213.201.220/32"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m tcp_options {
+              [32m+[0m[0m max = 6443
+              [32m+[0m[0m min = 6443
+
+              [32m+[0m[0m source_port_range {
+                  [32m+[0m[0m max = 65535
+                  [32m+[0m[0m min = 1024
+                }
+            }
+        }
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "6"
+          [32m+[0m[0m source      = "172.16.10.0/24"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m tcp_options {
+              [32m+[0m[0m max = 12250
+              [32m+[0m[0m min = 12250
+
+              [32m+[0m[0m source_port_range {
+                  [32m+[0m[0m max = 65535
+                  [32m+[0m[0m min = 1024
+                }
+            }
+        }
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "6"
+          [32m+[0m[0m source      = "172.16.10.0/24"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m tcp_options {
+              [32m+[0m[0m max = 6443
+              [32m+[0m[0m min = 6443
+
+              [32m+[0m[0m source_port_range {
+                  [32m+[0m[0m max = 65535
+                  [32m+[0m[0m min = 1024
+                }
+            }
+        }
+    }
+
+[1m  # oci_core_security_list.gru_secl-1_subnpub_oke_lb[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_security_list" "gru_secl-1_subnpub_oke_lb" {
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "secl-1_subnpub_oke_lb"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m egress_security_rules {
+          [32m+[0m[0m description      = (known after apply)
+          [32m+[0m[0m destination      = "0.0.0.0/0"
+          [32m+[0m[0m destination_type = "CIDR_BLOCK"
+          [32m+[0m[0m protocol         = "all"
+          [32m+[0m[0m stateless        = false
+        }
+
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "1"
+          [32m+[0m[0m source      = "0.0.0.0/0"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m icmp_options {
+              [32m+[0m[0m code = 4
+              [32m+[0m[0m type = 3
+            }
+        }
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "6"
+          [32m+[0m[0m source      = "0.0.0.0/0"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m tcp_options {
+              [32m+[0m[0m max = 443
+              [32m+[0m[0m min = 443
+
+              [32m+[0m[0m source_port_range {
+                  [32m+[0m[0m max = 65535
+                  [32m+[0m[0m min = 1024
+                }
+            }
+        }
+      [32m+[0m[0m ingress_security_rules {
+          [32m+[0m[0m description = (known after apply)
+          [32m+[0m[0m protocol    = "6"
+          [32m+[0m[0m source      = "0.0.0.0/0"
+          [32m+[0m[0m source_type = "CIDR_BLOCK"
+          [32m+[0m[0m stateless   = false
+
+          [32m+[0m[0m tcp_options {
+              [32m+[0m[0m max = 80
+              [32m+[0m[0m min = 80
+
+              [32m+[0m[0m source_port_range {
+                  [32m+[0m[0m max = 65535
+                  [32m+[0m[0m min = 1024
+                }
+            }
+        }
+    }
+
+[1m  # oci_core_service_gateway.gru_sgw[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_service_gateway" "gru_sgw" {
+      [32m+[0m[0m block_traffic  = (known after apply)
+      [32m+[0m[0m compartment_id = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags   = (known after apply)
+      [32m+[0m[0m display_name   = "sgw"
+      [32m+[0m[0m freeform_tags  = (known after apply)
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m state          = (known after apply)
+      [32m+[0m[0m time_created   = (known after apply)
+      [32m+[0m[0m vcn_id         = (known after apply)
+
+      [32m+[0m[0m services {
+          [32m+[0m[0m service_id   = "ocid1.service.oc1.sa-saopaulo-1.aaaaaaaacd57uig6rzxm2qfipukbqpje2bhztqszh3aj7zk2jtvf6gvntena"
+          [32m+[0m[0m service_name = (known after apply)
+        }
+    }
+
+[1m  # oci_core_subnet.gru_subnprv_oke_node_pool[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_subnet" "gru_subnprv_oke_node_pool" {
+      [32m+[0m[0m availability_domain        = (known after apply)
+      [32m+[0m[0m cidr_block                 = "172.16.10.0/24"
+      [32m+[0m[0m compartment_id             = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags               = (known after apply)
+      [32m+[0m[0m dhcp_options_id            = (known after apply)
+      [32m+[0m[0m display_name               = "subnprvokendpl"
+      [32m+[0m[0m dns_label                  = "subnprvokendpl"
+      [32m+[0m[0m freeform_tags              = (known after apply)
+      [32m+[0m[0m id                         = (known after apply)
+      [32m+[0m[0m ipv6cidr_block             = (known after apply)
+      [32m+[0m[0m ipv6cidr_blocks            = (known after apply)
+      [32m+[0m[0m ipv6virtual_router_ip      = (known after apply)
+      [32m+[0m[0m prohibit_internet_ingress  = (known after apply)
+      [32m+[0m[0m prohibit_public_ip_on_vnic = true
+      [32m+[0m[0m route_table_id             = (known after apply)
+      [32m+[0m[0m security_list_ids          = (known after apply)
+      [32m+[0m[0m state                      = (known after apply)
+      [32m+[0m[0m subnet_domain_name         = (known after apply)
+      [32m+[0m[0m time_created               = (known after apply)
+      [32m+[0m[0m vcn_id                     = (known after apply)
+      [32m+[0m[0m virtual_router_ip          = (known after apply)
+      [32m+[0m[0m virtual_router_mac         = (known after apply)
+    }
+
+[1m  # oci_core_subnet.gru_subnpub_oke_kubeapi[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_subnet" "gru_subnpub_oke_kubeapi" {
+      [32m+[0m[0m availability_domain        = (known after apply)
+      [32m+[0m[0m cidr_block                 = "172.16.40.0/28"
+      [32m+[0m[0m compartment_id             = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags               = (known after apply)
+      [32m+[0m[0m dhcp_options_id            = (known after apply)
+      [32m+[0m[0m display_name               = "subnpubokekapi"
+      [32m+[0m[0m dns_label                  = "subnpubokekapi"
+      [32m+[0m[0m freeform_tags              = (known after apply)
+      [32m+[0m[0m id                         = (known after apply)
+      [32m+[0m[0m ipv6cidr_block             = (known after apply)
+      [32m+[0m[0m ipv6cidr_blocks            = (known after apply)
+      [32m+[0m[0m ipv6virtual_router_ip      = (known after apply)
+      [32m+[0m[0m prohibit_internet_ingress  = (known after apply)
+      [32m+[0m[0m prohibit_public_ip_on_vnic = false
+      [32m+[0m[0m route_table_id             = (known after apply)
+      [32m+[0m[0m security_list_ids          = (known after apply)
+      [32m+[0m[0m state                      = (known after apply)
+      [32m+[0m[0m subnet_domain_name         = (known after apply)
+      [32m+[0m[0m time_created               = (known after apply)
+      [32m+[0m[0m vcn_id                     = (known after apply)
+      [32m+[0m[0m virtual_router_ip          = (known after apply)
+      [32m+[0m[0m virtual_router_mac         = (known after apply)
+    }
+
+[1m  # oci_core_subnet.gru_subnpub_oke_lb[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_subnet" "gru_subnpub_oke_lb" {
+      [32m+[0m[0m availability_domain        = (known after apply)
+      [32m+[0m[0m cidr_block                 = "172.16.30.0/24"
+      [32m+[0m[0m compartment_id             = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m defined_tags               = (known after apply)
+      [32m+[0m[0m dhcp_options_id            = (known after apply)
+      [32m+[0m[0m display_name               = "subnpubokelb"
+      [32m+[0m[0m dns_label                  = "subnpubokelb"
+      [32m+[0m[0m freeform_tags              = (known after apply)
+      [32m+[0m[0m id                         = (known after apply)
+      [32m+[0m[0m ipv6cidr_block             = (known after apply)
+      [32m+[0m[0m ipv6cidr_blocks            = (known after apply)
+      [32m+[0m[0m ipv6virtual_router_ip      = (known after apply)
+      [32m+[0m[0m prohibit_internet_ingress  = (known after apply)
+      [32m+[0m[0m prohibit_public_ip_on_vnic = false
+      [32m+[0m[0m route_table_id             = (known after apply)
+      [32m+[0m[0m security_list_ids          = (known after apply)
+      [32m+[0m[0m state                      = (known after apply)
+      [32m+[0m[0m subnet_domain_name         = (known after apply)
+      [32m+[0m[0m time_created               = (known after apply)
+      [32m+[0m[0m vcn_id                     = (known after apply)
+      [32m+[0m[0m virtual_router_ip          = (known after apply)
+      [32m+[0m[0m virtual_router_mac         = (known after apply)
+    }
+
+[1m  # oci_core_vcn.gru_vcn[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_vcn" "gru_vcn" {
+      [32m+[0m[0m byoipv6cidr_blocks               = (known after apply)
+      [32m+[0m[0m cidr_block                       = (known after apply)
+      [32m+[0m[0m cidr_blocks                      = [
+          [32m+[0m[0m "172.16.0.0/16",
+        ]
+      [32m+[0m[0m compartment_id                   = "ocid1.compartment.oc1..aaaaaaaaxic4n2rfic5zlwazlq7ocltm7dc6s44dg43iaudkrsk6r25o5hwa"
+      [32m+[0m[0m default_dhcp_options_id          = (known after apply)
+      [32m+[0m[0m default_route_table_id           = (known after apply)
+      [32m+[0m[0m default_security_list_id         = (known after apply)
+      [32m+[0m[0m defined_tags                     = (known after apply)
+      [32m+[0m[0m display_name                     = "vcn_terraform"
+      [32m+[0m[0m dns_label                        = "gruvcn"
+      [32m+[0m[0m freeform_tags                    = (known after apply)
+      [32m+[0m[0m id                               = (known after apply)
+      [32m+[0m[0m ipv6cidr_blocks                  = (known after apply)
+      [32m+[0m[0m ipv6private_cidr_blocks          = (known after apply)
+      [32m+[0m[0m is_ipv6enabled                   = (known after apply)
+      [32m+[0m[0m is_oracle_gua_allocation_enabled = (known after apply)
+      [32m+[0m[0m state                            = (known after apply)
+      [32m+[0m[0m time_created                     = (known after apply)
+      [32m+[0m[0m vcn_domain_name                  = (known after apply)
+    }
+
+[1mPlan:[0m 16 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m gru_oke_motando_id = (known after apply)
+[0m[1moci_core_vcn.gru_vcn: Creating...[0m[0m
+[0m[1moci_core_vcn.gru_vcn: Creation complete after 2s [id=ocid1.vcn.oc1.sa-saopaulo-1.amaaaaaatsbrckqa7mq7f7jwhryn35kfzjcpf7nsirnre7nrcvlnqgc4pmfa][0m
+[0m[1moci_core_service_gateway.gru_sgw: Creating...[0m[0m
+[0m[1moci_core_security_list.gru_secl-1_subnprv_oke_node_pool: Creating...[0m[0m
+[0m[1moci_core_dhcp_options.gru_dhcp-options: Creating...[0m[0m
+[0m[1moci_core_internet_gateway.gru_igw: Creating...[0m[0m
+[0m[1moci_core_security_list.gru_secl-1_subnpub_oke_kubeapi: Creating...[0m[0m
+[0m[1moci_core_nat_gateway.gru_ngw: Creating...[0m[0m
+[0m[1moci_core_security_list.gru_secl-1_subnpub_oke_lb: Creating...[0m[0m
+[0m[1moci_core_security_list.gru_secl-1_subnprv_oke_node_pool: Creation complete after 0s [id=ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaaq334yvupa4q5lkzwo5dz5hulfhur4d3eggtupjlbjvq3fadmphya][0m
+[0m[1moci_core_security_list.gru_secl-1_subnpub_oke_lb: Creation complete after 0s [id=ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaadebgdlhikst5mxg6k6cs26yryurjmtw6irfudcuaaefsmdpsadba][0m
+[0m[1moci_core_security_list.gru_secl-1_subnpub_oke_kubeapi: Creation complete after 1s [id=ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaa5qdpu3l7fwakl2ull4yaempc4muac5etz7t6hghdubx7hjcs3l3q][0m
+[0m[1moci_core_internet_gateway.gru_igw: Creation complete after 1s [id=ocid1.internetgateway.oc1.sa-saopaulo-1.aaaaaaaaxawl3ooucbpm5hnvlaibttfxgyabvyftm2uoz53hjm3ql4smorpa][0m
+[0m[1moci_core_route_table.gru_rtb_subnpub: Creating...[0m[0m
+[0m[1moci_core_service_gateway.gru_sgw: Creation complete after 1s [id=ocid1.servicegateway.oc1.sa-saopaulo-1.aaaaaaaavxj3olnmtv75fsafv4zltw2ynck6uyghjqptugablrkq5kxlv6oa][0m
+[0m[1moci_core_dhcp_options.gru_dhcp-options: Creation complete after 1s [id=ocid1.dhcpoptions.oc1.sa-saopaulo-1.aaaaaaaa3xabbmdgxifwuihubzncqiq76dn7cj7eehmwgdindcwhx6me4sta][0m
+[0m[1moci_core_route_table.gru_rtb_subnpub: Creation complete after 1s [id=ocid1.routetable.oc1.sa-saopaulo-1.aaaaaaaay6vylt6ejgylbwh5iw2zsfu5baafpmsrfzfiqaiweuxawjk67c6q][0m
+[0m[1moci_core_subnet.gru_subnpub_oke_kubeapi: Creating...[0m[0m
+[0m[1moci_core_subnet.gru_subnpub_oke_lb: Creating...[0m[0m
+[0m[1moci_core_nat_gateway.gru_ngw: Creation complete after 2s [id=ocid1.natgateway.oc1.sa-saopaulo-1.aaaaaaaaaraqv6v5igkdichd77mflzcvjr4yjnbklbpe2e3rdogkoq7eoemq][0m
+[0m[1moci_core_route_table.gru_rtb_subnprv: Creating...[0m[0m
+[0m[1moci_core_route_table.gru_rtb_subnprv: Creation complete after 1s [id=ocid1.routetable.oc1.sa-saopaulo-1.aaaaaaaay7zlhhmktwnbpizpq225cbpuuksmzjn3mcjknf5tdvrh6qkzfl4a][0m
+[0m[1moci_core_subnet.gru_subnprv_oke_node_pool: Creating...[0m[0m
+[0m[1moci_core_subnet.gru_subnpub_oke_kubeapi: Creation complete after 3s [id=ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaapm4lkjslxlgeb5wjgv3zbwxkqjmm6za5e5v5e5lh25s3vfhsazoa][0m
+[0m[1moci_core_subnet.gru_subnpub_oke_lb: Creation complete after 5s [id=ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaold6l2i7b36aht3vk473mdvzaqnehoywvce3dx3w5fc7tuiuhhra][0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Creating...[0m[0m
+[0m[1moci_core_subnet.gru_subnprv_oke_node_pool: Creation complete after 4s [id=ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaqpfpwyplevj6zardwelvfk2ghzz26owc3czedavgafgha374aiwa][0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [1m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [2m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [3m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [4m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [5m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [6m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m10s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m20s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m30s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m40s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [7m50s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Still creating... [8m0s elapsed][0m[0m
+[0m[1moci_containerengine_cluster.gru_oke_motando: Creation complete after 8m4s [id=ocid1.cluster.oc1.sa-saopaulo-1.aaaaaaaaaq3nmzpzanmlwengavh7vqkhiroik6edu36gd7mkmcvbo6rf6jfq][0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Creating...[0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [1m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [2m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [3m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [4m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [5m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [6m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [7m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [8m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [9m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m10s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m20s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m30s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m40s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [10m50s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Still creating... [11m0s elapsed][0m[0m
+[0m[1moci_containerengine_node_pool.gru_oke_motando_np-1: Creation complete after 11m5s [id=ocid1.nodepool.oc1.sa-saopaulo-1.aaaaaaaavfkqcbyiekj63aw2utb6hx7dqhblgs65zu5xgoxgon47aja6quqq][0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Creating...[0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Provisioning with 'local-exec'...[0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mExecuting: ["/bin/sh" "-c" "./oke-init.sh"]
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m[INFO] Configuring access to OKE ...
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mExisting Kubeconfig file found at /home/DANILO_DE_/.kube/config and new config merged into it
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m[INFO] Setting up kasten "namespace" ...
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m[INFO] Installing Kasten "service" ...
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mstorageclass.storage.k8s.io/oci patched
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mstorageclass.storage.k8s.io/oci-bv patched (no change)
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Still creating... [10s elapsed][0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mcustomresourcedefinition.apiextensions.k8s.io/volumesnapshotclasses.snapshot.storage.k8s.io created
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mcustomresourcedefinition.apiextensions.k8s.io/volumesnapshotcontents.snapshot.storage.k8s.io created
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mcustomresourcedefinition.apiextensions.k8s.io/volumesnapshots.snapshot.storage.k8s.io created
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Still creating... [20s elapsed][0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mvolumesnapshotclass.snapshot.storage.k8s.io/oci-bv-csi-snapclass created
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m"kasten" already exists with the same configuration, skipping
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Still creating... [30s elapsed][0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Still creating... [40s elapsed][0m[0m
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mNAME: k10
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mLAST DEPLOYED: Thu Jan 25 20:55:42 2024
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mNAMESPACE: kasten-io
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mSTATUS: deployed
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mREVISION: 1
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mTEST SUITE: None
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mNOTES:
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mThank you for installing Kasten’s K10 Data Management Platform 6.0.12!
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mDocumentation can be found at https://docs.kasten.io/.
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mHow to access the K10 Dashboard:
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mTo establish a connection to it use the following `kubectl` command:
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m`kubectl --namespace kasten-io port-forward service/gateway 8080:8000`
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mThe Kasten dashboard will be available at: `http://127.0.0.1:8080/k10/#/`
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mservice/gateway patched
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mNAME     EXTERNAL-IP  PORT(S)
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0mgateway  <pending>    8000:30092/TCP
+
+[0m[1mnull_resource.gru_oke-kubectl-cmds (local-exec):[0m [0m[INFO] Done!
+[0m[1mnull_resource.gru_oke-kubectl-cmds: Creation complete after 48s [id=1958686069840806807][0m
+[0m[1m[32m
+Apply complete! Resources: 16 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mgru_oke_motando_id = "ocid1.cluster.oc1.sa-saopaulo-1.aaaaaaaaaq3nmzpzanmlwengavh7vqkhiroik6edu36gd7mkmcvbo6rf6jfq"
